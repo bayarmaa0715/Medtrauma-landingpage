@@ -1,32 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import BookingButton from "./BookingButton";
 const Hero = () => {
   return (
-    <div className="md:flex justify-between space-y-5">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">
+    <div
+      className="relative bg-center bg-no-repeat bg-cover justify-center items-center  flex h-[60vh] text-white  "
+      style={{ backgroundImage: "url('/images/cover.jpg')" }}
+    >
+      <div className="absolute inset-0 z-0 bg-black opacity-[.20]"></div>{" "}
+      <div className="absolute flex flex-col items-center justify-center p-4 mx-auto md:top-2/6 md:left-1/6 md:max-w-2xl z-1 text-start">
+        <h1 className="mb-6 text-4xl font-bold uppercase ">
           Соронзон Үелзүүрт Томографийн аппарат
         </h1>
-        <p className="text-gray-600 text-lg mb-8">
-          Magnetic Resonance Imaging-MIRI
-        </p>
-        <p className="text-gray-600 text-lg mb-8">
+        <p className="mb-8 text-lg ">
           Медтравма эмнэлэгт SIEMENS брендийн MAGNETOM ESSENZA 1.5 Tesla
           Соронзон Резонанст томографийн аппаратыг ашиглаж байна
         </p>
 
-        <div className="flex justify-center gap-4 mb-12">
-          <button className="bg-[#337669] text-white px-8 py-3 rounded-full hover:bg-white hover:border-[#337669] hover:border-2  hover:text-[#337669] transition-colors duration-300">
-            Book appointment now
-          </button>
-        </div>
-      </div>
-      <div className="w-full h-full">
-        <div className="relative w-[200px] h-[100px] ">
-          <Image src={"/images/mri.png"} alt="mri" fill />
-        </div>
-        <div className="relative w-[200px] h-[100px] ">
-          <Image src={"/images/ct.webp"} alt="mri" fill />
+        <div className="flex justify-center mb-12">
+          <BookingButton
+            btnClass={
+              "bg-transparent border cursor-pointer border-white text-white px-8 py-3 rounded-lg hover:border-[#337669] hover:border-2  hover:text-[#337669] transition-colors duration-300"
+            }
+          />
         </div>
       </div>
     </div>

@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
-:root {
-}
-
-@theme inline {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
 body {
   /* background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif; */
+}
+.underline_animation {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.underline_animation::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #337669;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+.underline_animation:hover::after {
+  width: 100%;
+  left: 0;
 }
