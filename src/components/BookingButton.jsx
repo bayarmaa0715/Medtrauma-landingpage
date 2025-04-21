@@ -98,19 +98,6 @@ const BookingButton = ({ btnClass }) => {
               </Select.Option>
             </Select>
           </Form.Item>
-          {/* <Form.Item
-            label="Эрхтэн сонгох"
-            name="service"
-            rules={[{ required: true, message: "Үйлчилгээ сонгоно уу" }]}
-          >
-            <Select placeholder="Сонгох">
-              <Select.Option value="Нуруу">Нуруу</Select.Option>
-              <Select.Option value="Толгой">Толгой </Select.Option>
-              <Select.Option value="Цөс нойр булчирхай">
-                Цөс нойр булчирхай
-              </Select.Option>
-            </Select>
-          </Form.Item> */}
           <Form.Item label="Зовиур" name="reason">
             <Input.TextArea rows={3} />
           </Form.Item>
