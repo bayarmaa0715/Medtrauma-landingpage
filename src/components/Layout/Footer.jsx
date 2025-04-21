@@ -87,7 +87,7 @@ const Footer = () => {
                   <a href="tel:77110351">
                     <span className="mr-3 font-bold">Утас:</span>77110351
                   </a>
-                  <a href="tel:77110351"> , 77110351</a>
+                  <a href="tel:95162407"> , 95162407</a>
                 </div>
                 <div className="flex">
                   <a href="mailto:info@medtrauma.mn">
