@@ -90,8 +90,12 @@ const BookingButton = ({ btnClass }) => {
             rules={[{ required: true, message: "Үйлчилгээ сонгоно уу" }]}
           >
             <Select placeholder="Сонгох">
-              <Select.Option value="томограф">MRI </Select.Option>
-              <Select.Option value="мри">CT</Select.Option>
+              <Select.Option value="томограф">
+                Компьютер томографи CT{" "}
+              </Select.Option>
+              <Select.Option value="мри">
+                Соронзон үелзүүрт аппарат MRI
+              </Select.Option>
             </Select>
           </Form.Item>
           {/* <Form.Item
@@ -107,11 +111,7 @@ const BookingButton = ({ btnClass }) => {
               </Select.Option>
             </Select>
           </Form.Item> */}
-          <Form.Item
-            label="Зовиур"
-            name="reason"
-            rules={[{ required: true, message: "Шалтгаанаа бичнэ үү" }]}
-          >
+          <Form.Item label="Зовиур" name="reason">
             <Input.TextArea rows={3} />
           </Form.Item>
 

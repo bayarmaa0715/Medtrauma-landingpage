@@ -13,7 +13,7 @@ const Service = () => {
       <ServiceCard
         services={services}
         btnClass={
-          "w-full bg-[#0da99e] group-hover:bg-white group-hover:text-[#0da99e]  text-lg text-white px-2 py-1 rounded-xl "
+          "w-full bg-[#0da99e] group-hover:bg-white group-hover:border-[#0da99e]  group-hover:border group-hover:text-[#0da99e] text-lg text-white px-2 py-1 rounded-xl cursor-pointer "
         }
       />
     </div>

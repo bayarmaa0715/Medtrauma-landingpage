@@ -2,25 +2,25 @@ import React from "react";
 import Image from "next/image";
 const services = [
   {
-    name: "Компвьютер томографи",
+    name: "Компьютер томографи CT",
     description: "Lorem ipsum dolor sit amet",
     img: "/images/ct.webp",
   },
   {
-    name: "Соронзон үелзүүрт аппарат",
+    name: "Соронзон үелзүүрт аппарат MRI",
     description: "Lorem ipsum dolor sit amet",
     img: "/images/mri.png",
   },
-  {
-    name: "Рентген",
-    description: "Lorem ipsum dolor sit amet",
-    img: "/images/ct.webp",
-  },
-  {
-    name: "Хэт авиан оншилгоо",
-    description: "Lorem ipsum dolor sit amet",
-    img: "/images/mri.png",
-  },
+  //   {
+  //     name: "Рентген",
+  //     description: "Lorem ipsum dolor sit amet",
+  //     img: "/images/ct.webp",
+  //   },
+  //   {
+  //     name: "Хэт авиан оншилгоо",
+  //     description: "Lorem ipsum dolor sit amet",
+  //     img: "/images/mri.png",
+  //   },
 ];
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="order-last md:pr-10 md:order-1">
             <a
               className="relative block overflow-hidden aspect-[16/9]"
-              href="https://www.google.com/maps/place/%D0%A5%D1%83%D1%80%D0%B4+27-%D1%80+%D0%B1%D0%B0%D0%B9%D1%80/@47.8997434,106.9172752,17.43z/data=!4m6!3m5!1s0x5d96938486986a53:0xf185c9adee17f5da!8m2!3d47.9001005!4d106.9198894!16s%2Fg%2F11qzcm3st6?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/24+%D1%86%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD+MRI,+CT+Center+-+%D0%9C%D0%B5%D0%B4%D1%82%D1%80%D0%B0%D0%B2%D0%BC%D0%B0+%D1%8D%D0%BC%D0%BD%D1%8D%D0%BB%D1%8D%D0%B3+-/@47.9201622,106.8556289,17z/data=!3m1!4b1!4m6!3m5!1s0x5d9692da1710d663:0x5b3c5b271af1439b!8m2!3d47.9201622!4d106.8556289!16s%2Fg%2F11f3rw9ddf?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D"
               target="_blank"
             >
               <Image
@@ -70,7 +70,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex flex-col gap-5">
               <p className="text-2xl font-bold text-center">
                 Бидэнтэй холбогдохыг хүсвэл
               </p>
@@ -79,9 +79,8 @@ const Footer = () => {
                   href="https://www.google.com/maps/place/%D0%A5%D1%83%D1%80%D0%B4+27-%D1%80+%D0%B1%D0%B0%D0%B9%D1%80/@47.8997434,106.9172752,17.43z/data=!4m6!3m5!1s0x5d96938486986a53:0xf185c9adee17f5da!8m2!3d47.9001005!4d106.9198894!16s%2Fg%2F11qzcm3st6?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                 >
-                  <span className="mr-3 font-bold">Хаяг:</span> Гэмтэл Согог
-                  Судлалын Үндэсний Төвийн баруун талд, 3-р Хороолол,
-                  Улаанбаатар
+                  <span className="mr-3 font-bold">Хаяг:</span> Баянгол дүүрэг
+                  7-р хороо, ГССҮТ-ийн баруун талд Медтравма эмнэлэг, 16094
                 </a>
                 <div className="flex">
                   <a href="tel:77110351">
@@ -99,9 +98,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <footer className="pt-4 pb-10 bg-white border-t">
+        <footer className="pt-4 pb-10 border-t border-gray-200">
           <div className="container justify-between px-4 mx-auto md:flex">
-            <div className="uppercase ">Медтравма Эмнэлэг</div>
+            <div className="uppercase ">medtrauma</div>
             <div className="">© Copyright Bayarmaa. All Rights Reserved</div>
           </div>
         </footer>
