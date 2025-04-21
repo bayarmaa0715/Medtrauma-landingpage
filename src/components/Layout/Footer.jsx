@@ -39,7 +39,7 @@ const Footer = () => {
                 fill
                 sizes="w"
                 priority
-                className="object-cover w-auto h-auto transition-all rounded-lg hover:rounded-lg hover:scale-105"
+                className="object-cover w-auto h-auto transition-all border rounded-lg hover:rounded-lg hover:scale-105"
               />
             </a>
           </div>
@@ -54,14 +54,16 @@ const Footer = () => {
                     className="flex items-center gap-5"
                     key={`foote image ${i}`}
                   >
-                    <Image
-                      src={item.img}
-                      alt="image"
-                      width={60}
-                      height={60}
-                      priority
-                      className="object-cover w-auto h-auto transition-all rounded hover:scale-105"
-                    />
+                    <div className="relative w-20 h-20 border-2 rounded-full border-[#0da99e]">
+                      <Image
+                        src={item.img}
+                        alt="image"
+                        fill
+                        priority
+                        className="object-cover w-auto h-auto transition-all rounded-full hover:scale-105"
+                      />
+                    </div>
+
                     <p className="text-lg uppercase ">{item.name}</p>
                   </div>
                 ))}

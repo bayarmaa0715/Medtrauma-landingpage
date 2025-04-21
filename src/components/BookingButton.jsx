@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Modal, Form, Input, Button, Select } from "antd";
+import {
+  Modal,
+  Form,
+  Input,
+  Button,
+  Select,
+  DatePicker,
+  TimePicker,
+} from "antd";
 
 const BookingButton = ({ btnClass }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,17 +59,54 @@ const BookingButton = ({ btnClass }) => {
           >
             <Input />
           </Form.Item>
+          <div className="justify-between gap-2 md:flex ">
+            <Form.Item
+              label="Өдөр"
+              name="date"
+              className="w-full"
+              rules={[{ required: true, message: "Өдөрөө сонгоно уу" }]}
+            >
+              <DatePicker style={{ width: "100%" }} />
+            </Form.Item>
+
+            <Form.Item
+              label="Цаг"
+              name="time"
+              className="w-full"
+              rules={[{ required: true, message: "Цагаа сонгоно уу" }]}
+            >
+              <TimePicker
+                style={{ width: "100%" }}
+                format="HH:mm"
+                minuteStep={10}
+                use12Hours={false}
+              />
+            </Form.Item>
+          </div>
+
           <Form.Item
             label="Үйлчилгээ"
             name="service"
             rules={[{ required: true, message: "Үйлчилгээ сонгоно уу" }]}
           >
             <Select placeholder="Сонгох">
-              <Select.Option value="рентген">Нуруу</Select.Option>
-              <Select.Option value="томограф">Тархи </Select.Option>
-              <Select.Option value="мри">Цөс нойр булчирхай</Select.Option>
+              <Select.Option value="томограф">MRI </Select.Option>
+              <Select.Option value="мри">CT</Select.Option>
             </Select>
           </Form.Item>
+          {/* <Form.Item
+            label="Эрхтэн сонгох"
+            name="service"
+            rules={[{ required: true, message: "Үйлчилгээ сонгоно уу" }]}
+          >
+            <Select placeholder="Сонгох">
+              <Select.Option value="Нуруу">Нуруу</Select.Option>
+              <Select.Option value="Толгой">Толгой </Select.Option>
+              <Select.Option value="Цөс нойр булчирхай">
+                Цөс нойр булчирхай
+              </Select.Option>
+            </Select>
+          </Form.Item> */}
           <Form.Item
             label="Зовиур"
             name="reason"
