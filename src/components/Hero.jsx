@@ -17,10 +17,10 @@ const Hero = () => {
           Соронзон Резонанст томографийн аппаратыг ашиглаж байна
         </p>
 
-        <div className="flex justify-center mb-12">
+        <div className="flex self-start mb-12">
           <BookingButton
             btnClass={
-              "bg-transparent border cursor-pointer border-white text-white px-8 py-3 rounded-lg hover:border-[#337669] hover:border-2  hover:text-[#337669] transition-colors duration-300"
+              "bg-transparent border cursor-pointer border-[#337669] text-[#337669] px-8 py-3 rounded-lg hover:bg-[#337669]  hover:border-2  hover:text-white transition-colors duration-300"
             }
           />
         </div>
