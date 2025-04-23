@@ -92,9 +92,9 @@ const BookingButton = ({ btnClass }) => {
           >
             <Select placeholder="Сонгох">
               <Select.Option value={1}>
-                Соронзон үелзүүрт аппарат MRI
+                Соронзон үелзүүрт томографи MRI
               </Select.Option>
-              <Select.Option value={2}>Компьютер томографи CT </Select.Option>
+              <Select.Option value={2}>Компьютерт томографи CT </Select.Option>
             </Select>
           </Form.Item>
           <Form.Item label="Зовиур" name="reason">

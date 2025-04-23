@@ -10,11 +10,14 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 bg-black opacity-[.20]"></div>{" "}
       <div className="absolute flex flex-col items-center justify-center p-4 mx-auto md:top-2/6 md:left-1/6 md:max-w-2xl z-1 text-start">
         <h1 className="mb-6 text-4xl font-bold uppercase ">
-          Соронзон Үелзүүрт Томографийн аппарат
+          Медтравма эмнэлэг
         </h1>
         <p className="mb-8 text-lg ">
-          Медтравма эмнэлэгт SIEMENS брендийн MAGNETOM ESSENZA 1.5 Tesla
-          Соронзон Резонанст томографийн аппаратыг ашиглаж байна
+          Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
+        </p>
+        <p className="mb-8 text-lg ">MRI- Соронзон Резонанст Томографи</p>
+        <p className="mb-8 text-lg ">
+          СТ- Компьютерт Томографи 24 цагийн оношилгоо{" "}
         </p>
 
         <div className="flex self-start mb-12">
