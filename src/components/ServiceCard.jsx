@@ -6,7 +6,10 @@ const ServiceCard = ({ services, btnClass }) => {
   return (
     <div className="flex flex-col justify-center w-full gap-5 md:flex-row">
       {services?.map((item, index) => (
-        <div className="group shadow-lg transition duration-300 ease-in-out p-6 bg-white rounded-3xl w-1/2 hover:border hover:border-[#0da99e] flex flex-col md:flex-row gap-6">
+        <div
+          key={`servicecard-${index}`}
+          className="group shadow-lg transition duration-300 ease-in-out p-6 bg-white rounded-3xl w-1/2 hover:border hover:border-[#0da99e] flex flex-col md:flex-row gap-6"
+        >
           <div className="relative w-full overflow-hidden md:w-1/2 h-52 md:h-full rounded-3xl">
             <Image
               src={item.img}

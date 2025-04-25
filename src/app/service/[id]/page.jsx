@@ -1,6 +1,6 @@
 "use client";
 import { data } from "@/app/data";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRightOutlined } from "@ant-design/icons";
@@ -8,10 +8,15 @@ import Image from "next/image";
 
 const Detail = () => {
   const { id } = useParams();
+  const searchParams = useSearchParams();
+  const serviceTypeId = searchParams.get("type");
+  console.log("firserviceTypeIdst", serviceTypeId);
   const [open, setOpen] = useState(false);
 
-  const selected = data.find((item) => item.id == id);
-
+  const selected = data.find((item) => item.id === Number(id));
+  const filterDataByType = (typeId) => {
+    return data.filter((item) => item.serviceTypeId === Number(typeId));
+  };
   useEffect(() => {
     setOpen(true);
   }, [id]);
@@ -21,9 +26,9 @@ const Detail = () => {
       <div className="grid w-full grid-cols-1 gap-8 max-w-7xl md:grid-cols-4">
         {/* Sidebar */}
         <div className="flex flex-col gap-4 p-4 bg-white shadow-md rounded-3xl">
-          {data.map((item, i) => (
+          {filterDataByType(serviceTypeId).map((item, i) => (
             <Link
-              href={`/service/${item.id}`}
+              href={`/service/${item.id}?type=${item.serviceTypeId}`}
               key={`servicedata-${i}`}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                 id == item.id
