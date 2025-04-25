@@ -73,7 +73,7 @@ export const data = [
     name: "Дээд болон дээд үе мөч",
     img: "/images/service/broken-bone.png",
     description:
-      "Энэ үйлчилгээ нь жирэмслэлт, үргүйдэл, умайн хавдар болон давсагны эмгэгүүдийг оношлоход зориулагдсан оношилгооны арга юм.",
+      "Энэ үйлчилгээ нь жирэмслэлт, үргүйдэл, умайн хавдар болон давсагны эмгэгүүдийг оношлоход зориулагддаг оношилгооны арга юм.",
     duration: "30-60 минут",
     reminder:
       "Шээсний давсаг бага зэрэг дүүрсэн байх шаардлагатай. Жирэмсэн бол урьдчилан мэдэгдэнэ үү.",
@@ -81,6 +81,69 @@ export const data = [
   },
   {
     id: 7,
+    name: "Толгой судастай",
+    img: "/images/service/spinal-cord.png",
+    description:
+      "Тархины бүтэц, судасны хэлбэрийг нарийвчлан шинжилдэг. Толгой өвдөх, ухаан алдах, саажилт зэрэг шинж тэмдгүүдийн шалтгааныг тогтооход хэрэглэгддэг.",
+    duration: "30-45 минут",
+    reminder:
+      "Хиймэл шүд, чихний аппарат, метал суулгац байгаа эсэхийг мэдээлэх шаардлагатай.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 8,
+    name: "Нуруу нугас",
+    img: "/images/service/spinal.png",
+    description:
+      "Нуруу, нугасны гэмтэл, дискний завсар, мэдрэлийн шахалт зэрэг асуудлыг тодорхойлдог.",
+    duration: "30-60 минут",
+    reminder: "Метал обьект, бэлдмэл хэрэглэхээс зайлсхийх.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 9,
+    name: "Уушги, цээж",
+    img: "/images/service/bones.png",
+    description:
+      "Цээжний хөндий, зүрх, уушги болон судасны бүтцийг харуулна. Хорт хавдрын эрт үеийг илрүүлэхэд хэрэглэнэ.",
+    duration: "30-45 минут",
+    reminder: "Судсаар контраст шингэн хийх тохиолдолд хоосон ходоодтой байх.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 10,
+    name: "Хэвлий (элэг, бөөр, нойр булчирхай)",
+    img: "/images/service/biology.png",
+    description:
+      "Дотор эрхтний бүтцийг судлахад ашиглагддаг. Хавдар, үрэвсэл болон бусад эмгэгүүдийг илрүүлнэ.",
+    duration: "30-60 минут",
+    reminder: "Ходоод хоосон байх шаардлагатай. Металл зүйл зүүхгүй.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 11,
+    name: "Үр хөврөл, давсаг, сав",
+    img: "/images/service/pelvic-bone.png",
+    description:
+      "Жирэмслэлт, үргүйдэл, умайн хавдар болон давсагны эмгэгүүдийг оношлоход зориулагдсан.",
+    duration: "30-60 минут",
+    reminder:
+      "Шээсний давсаг бага зэрэг дүүрсэн байх хэрэгтэй. Жирэмсэн эсэхийг урьдчилан мэдэгдэх.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 12,
+    name: "Дээд болон дээд үе мөч",
+    img: "/images/service/broken-bone.png",
+    description:
+      "Энэ үйлчилгээ нь жирэмслэлт, үргүйдэл, умайн хавдар болон давсагны эмгэгүүдийг оношлоход зориулагддаг оношилгооны арга юм.",
+    duration: "30-60 минут",
+    reminder:
+      "Шээсний давсаг бага зэрэг дүүрсэн байх шаардлагатай. Жирэмсэн бол урьдчилан мэдэгдэнэ үү.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 13,
     name: "Гавал, тархи",
     img: "/images/service/human-brain.png",
     description:
@@ -90,7 +153,7 @@ export const data = [
     serviceTypeId: 2,
   },
   {
-    id: 8,
+    id: 14,
     name: "Хамар, чих, хоолой",
     img: "/images/service/neck.png",
     description:
@@ -100,7 +163,7 @@ export const data = [
     serviceTypeId: 2,
   },
   {
-    id: 9,
+    id: 15,
     name: "Цээж, уушги",
     img: "/images/service/bones.png",
     description:
@@ -110,7 +173,7 @@ export const data = [
     serviceTypeId: 2,
   },
   {
-    id: 10,
+    id: 16,
     name: "Хэвлий, бага аарцаг",
     img: "/images/service/hip-joint.png",
     description:
@@ -120,7 +183,7 @@ export const data = [
     serviceTypeId: 2,
   },
   {
-    id: 11,
+    id: 17,
     name: "Яс, үе мөч",
     img: "/images/service/prosthetics.png",
     description:
@@ -130,7 +193,79 @@ export const data = [
     serviceTypeId: 2,
   },
   {
-    id: 12,
+    id: 18,
+    name: "Судасны оношилгоо",
+    img: "/images/service/brain.png",
+    description:
+      "Биеийн том болон нарийн судаснуудын хэлбэр, бөглөрөл, нарийслыг тодорхойлоход хэрэглэгддэг өндөр нарийвчлалтай дүрслэлийн арга.",
+    duration: "20-30 минут",
+    reminder:
+      "Контраст бодис судсаар тарина. Хоосон ходоодтой ирэх шаардлагатай. Харшлын түүх байвал урьдчилан мэдээлнэ үү.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 19,
+    name: "Дээд болон дээд үе мөч",
+    img: "/images/service/broken-bone.png",
+    description:
+      "Энэ үйлчилгээ нь жирэмслэлт, үргүйдэл, умайн хавдар болон давсагны эмгэгүүдийг оношлоход зориулагддаг оношилгооны арга юм.",
+    duration: "30-60 минут",
+    reminder:
+      "Шээсний давсаг бага зэрэг дүүрсэн байх шаардлагатай. Жирэмсэн бол урьдчилан мэдэгдэнэ үү.",
+    serviceTypeId: 1,
+  },
+  {
+    id: 20,
+    name: "Гавал, тархи",
+    img: "/images/service/human-brain.png",
+    description:
+      "Тархины гэмтэл, хаван, цус харвалт, хавдар болон бусад эмгэгүүдийг хурдан хугацаанд оношлоход зориулагдсан.",
+    duration: "15-30 минут",
+    reminder: "Контраст шингэн хэрэглэгдэх бол өмнө нь мэдээлнэ үү.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 21,
+    name: "Хамар, чих, хоолой",
+    img: "/images/service/neck.png",
+    description:
+      "Чихний хөндий, хамрын дайвар хөндий, хоолойн бүтэц зэргийг оношлоход тохиромжтой.",
+    duration: "10-20 минут",
+    reminder: "Хөдөлгөөнгүй хэвээр байх шаардлагатай.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 22,
+    name: "Цээж, уушги",
+    img: "/images/service/bones.png",
+    description:
+      "Цээжний хөндий, зүрх, уушги болон хавдар, үрэвсэл зэрэг эмгэгүүдийг тодорхойлно.",
+    duration: "15-30 минут",
+    reminder: "Контраст хэрэглэгдэх бол хоосон ходоодтой ирнэ.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 23,
+    name: "Хэвлий, бага аарцаг",
+    img: "/images/service/hip-joint.png",
+    description:
+      "Элэг, бөөр, нойр булчирхай, давсаг, умайн бүтэц зэрэг эрхтнүүдийг харахад хэрэглэгддэг.",
+    duration: "20-30 минут",
+    reminder: "Шаардлагатай бол контраст шингэн хэрэглэнэ.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 24,
+    name: "Яс, үе мөч",
+    img: "/images/service/prosthetics.png",
+    description:
+      "Ясны хугарал, хавдар, ясны сийрэгжилт болон үе мөчний гэмтлийг оношлоход ашиглагддаг.",
+    duration: "10-20 минут",
+    reminder: "Металл зүйлсийг тайлж ирнэ.",
+    serviceTypeId: 2,
+  },
+  {
+    id: 25,
     name: "Судасны оношилгоо",
     img: "/images/service/brain.png",
     description:
@@ -141,6 +276,7 @@ export const data = [
     serviceTypeId: 2,
   },
 ];
+
 export const highlights = [
   { img: "/images/service/ct-scan.png", title: "CT" },
   { img: "/images/service/medical.png", title: "MRI" },

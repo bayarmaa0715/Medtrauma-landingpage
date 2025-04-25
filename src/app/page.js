@@ -66,32 +66,46 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-                {filterDataByType(item.id).map((value, index) => (
-                  <Link
-                    href={`/service/${value.id}?type=${value.serviceTypeId}`}
-                    key={index}
-                    className="flex items-center justify-between gap-4 bg-white p-4 rounded-xl shadow-lg transition-all group border  border-[#0da99e]"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-16 h-16 overflow-hidden rounded-full">
-                        <Image
-                          src={value.img}
-                          alt={`Service ${value.name}`}
-                          fill
-                          className="object-cover transition-transform group-hover:scale-105"
+              <div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                  {filterDataByType(item.id)
+                    .slice(0, 6)
+                    .map((value, index) => (
+                      <Link
+                        href={`/service/${value.id}?type=${value.serviceTypeId}`}
+                        key={index}
+                        className="flex items-center justify-between gap-4 bg-white p-4 rounded-xl shadow-lg transition-all group border border-[#0da99e]"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="relative w-16 h-16 overflow-hidden rounded-full">
+                            <Image
+                              src={value.img}
+                              alt={`Service ${value.name}`}
+                              fill
+                              className="object-cover transition-transform group-hover:scale-105"
+                            />
+                          </div>
+                          <p className="font-medium text-gray-700 group-hover:text-[#0da99e] transition md:text-lg uppercase">
+                            {value.name}
+                          </p>
+                        </div>
+                        <ArrowRightOutlined
+                          className="transition"
+                          style={{ color: "#0da99e" }}
                         />
-                      </div>
-                      <p className="font-medium text-gray-700 group-hover:text-[#0da99e] transition">
-                        {value.name}
-                      </p>
-                    </div>
-                    <ArrowRightOutlined
-                      className="transition "
-                      style={{ color: "#0da99e" }}
-                    />
+                      </Link>
+                    ))}
+                </div>
+                <div className="flex justify-center w-full mt-6 md:justify-end">
+                  <Link
+                    href={`/service/${
+                      data.find((item) => item.serviceTypeId === item.id)?.id
+                    }?type=${item.id}`}
+                    className="text-lg font-semibold text-[#0da99e] hover:text-white hover:bg-[#0da99e] border-2 border-[#0da99e] rounded-xl px-6 py-2 transition-all"
+                  >
+                    Дэлгэрэнгүйг харах
                   </Link>
-                ))}
+                </div>
               </div>
             </div>
           ))}
