@@ -79,8 +79,8 @@ export const data = [
   },
 ];
 export const highlights = [
+  { img: "/images/service/ct-scan.png", title: "CT" },
+  { img: "/images/service/medical.png", title: "MRI" },
   { img: "/images/service/24-7.png", title: "24 цагийн оношилгоо" },
-  { img: "/images/service/24-7.png", title: "24 цагийн оношилгоо" },
-  { img: "/images/service/24-7.png", title: "24 цагийн оношилгоо" },
-  { img: "/images/service/24-7.png", title: "24 цагийн оношилгоо" },
+  { img: "/images/service/document.png", title: "Хариу гаргалт" },
 ];
