@@ -1,27 +1,7 @@
 import React from "react";
 import Image from "next/image";
-const services = [
-  {
-    name: "Компьютер томографи CT",
-    description: "Lorem ipsum dolor sit amet",
-    img: "/images/ct.webp",
-  },
-  {
-    name: "Соронзон үелзүүрт аппарат MRI",
-    description: "Lorem ipsum dolor sit amet",
-    img: "/images/mri.png",
-  },
-  //   {
-  //     name: "Рентген",
-  //     description: "Lorem ipsum dolor sit amet",
-  //     img: "/images/ct.webp",
-  //   },
-  //   {
-  //     name: "Хэт авиан оншилгоо",
-  //     description: "Lorem ipsum dolor sit amet",
-  //     img: "/images/mri.png",
-  //   },
-];
+import { services } from "@/app/data";
+
 const Footer = () => {
   return (
     <div className="md:rounded-t-4xl bg-gray-50">
@@ -54,7 +34,7 @@ const Footer = () => {
                     className="flex items-center gap-5"
                     key={`foote image ${i}`}
                   >
-                    <div className="relative w-20 h-20 border-2 rounded-full border-[#0da99e]">
+                    <div className="relative w-20 h-20 rounded-full shrink-0">
                       <Image
                         src={item.img}
                         alt="image"
@@ -76,7 +56,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-2">
                 <a
-                  href="https://www.google.com/maps/place/%D0%A5%D1%83%D1%80%D0%B4+27-%D1%80+%D0%B1%D0%B0%D0%B9%D1%80/@47.8997434,106.9172752,17.43z/data=!4m6!3m5!1s0x5d96938486986a53:0xf185c9adee17f5da!8m2!3d47.9001005!4d106.9198894!16s%2Fg%2F11qzcm3st6?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps/place/24+%D1%86%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD+MRI,+CT+Center+-+%D0%9C%D0%B5%D0%B4%D1%82%D1%80%D0%B0%D0%B2%D0%BC%D0%B0+%D1%8D%D0%BC%D0%BD%D1%8D%D0%BB%D1%8D%D0%B3+-/@47.9201622,106.853054,17z/data=!3m1!4b1!4m6!3m5!1s0x5d9692da1710d663:0x5b3c5b271af1439b!8m2!3d47.9201622!4d106.8556289!16s%2Fg%2F11f3rw9ddf?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D"
                   target="_blank"
                 >
                   <span className="mr-3 font-bold">Хаяг:</span> Баянгол дүүрэг
@@ -92,6 +72,13 @@ const Footer = () => {
                   <a href="mailto:info@medtrauma.mn">
                     <span className="mr-3 font-bold">Имэйл:</span>
                     info@medtrauma.mn
+                  </a>
+                </div>
+                <div className="flex">
+                  <a href="https://www.facebook.com/24MRI">
+                    <span className="mr-3 font-bold">Facebook:</span>
+                    24 цагийн MRI CT Center - Медтравма Эмнэлэг - Medtrauma
+                    Hospital
                   </a>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 import ServiceCard from "@/components/ServiceCard";
 import React from "react";
-import { services } from "../page";
+import { services } from "../data";
 
 const Service = () => {
   return (

@@ -11,9 +11,9 @@ const Navbar = () => {
     { href: "/contact", label: "Холбоо барих" },
   ];
   return (
-    <header className="flex justify-center w-full ">
+    <header className="flex justify-center w-full shadow-xl ">
       <div className="container flex items-center justify-between py-4">
-        <div className="flex items-center gap-5">
+        <Link href={"/"} className="flex items-center gap-5">
           <img
             src="/images/logo.jpg"
             alt="MediFirm Logo"
@@ -24,7 +24,7 @@ const Navbar = () => {
             alt="MediFirm Logo Text"
             className="h-[20px] w-[200px]"
           />
-        </div>
+        </Link>
 
         <nav className="hidden space-x-10 md:flex">
           {navItems.map((item, i) => (

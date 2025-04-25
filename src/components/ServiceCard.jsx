@@ -6,24 +6,22 @@ const ServiceCard = ({ services, btnClass }) => {
   return (
     <div className="flex flex-col justify-center w-full gap-5 md:flex-row">
       {services?.map((item, index) => (
-        <div
-          key={`service-${index}`}
-          className=" group hover:border hover:border-[#0da99e] md:flex-row  flex flex-col gap-5 p-10 bg-[#f4f4f4] font-bold rounded-4xl md:w-1/2   "
-        >
-          <div className="relative w-full h-[200px] md:h-[400px] md:w-1/2 rounded-4xl">
+        <div className="group shadow-lg transition duration-300 ease-in-out p-6 bg-white rounded-3xl w-1/2 hover:border hover:border-[#0da99e] flex flex-col md:flex-row gap-6">
+          <div className="relative w-full overflow-hidden md:w-1/2 h-52 md:h-full rounded-3xl">
             <Image
               src={item.img}
-              alt={`Service-img-${index}`}
+              alt={`Үйлчилгээ - ${item.name}`}
               fill
-              className="object-cover rounded-4xl"
+              className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-3xl"
             />
           </div>
-          <div className="flex flex-col justify-center gap-5 md:gap-10 md:w-1/2 ">
-            <div className="flex flex-col gap-5 md:gap-10">
-              <h1 className="text-xl font-bold">{item.name}</h1>
-              <p className="font-normal ">{item.description}</p>
-            </div>
-            <BookingButton btnClass={btnClass} />
+          <div className="flex flex-col justify-between gap-4 md:w-1/2">
+            <h2 className="text-2xl font-semibold ">{item.name}</h2>
+            <p className="text-gray-600">{item.description}</p>
+            <BookingButton
+              btnClass="w-full bg-[#0da99e] text-white hover:bg-white hover:text-[#0da99e] hover:border transition-all py-2 rounded-xl"
+              defaultService={item.name}
+            />
           </div>
         </div>
       ))}
