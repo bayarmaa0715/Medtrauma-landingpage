@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
+import BookingButton from "@/components/BookingButton";
 
 const Detail = () => {
   const { id } = useParams();
@@ -57,7 +58,7 @@ const Detail = () => {
                 {selectedData.serviceTypeId == 1 ? "MRI" : "CT"}-
                 {selectedData.name}
               </h2>
-              <div className="flex gap-5 md:gap-10 ">
+              <div className="flex items-center justify-center gap-5 md:gap-10 ">
                 <div className="relative w-full h-64 overflow-hidden md:h-80 rounded-3xl">
                   <Image
                     src={selectedData.img}
@@ -66,7 +67,7 @@ const Detail = () => {
                     className="transition-all hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-col gap-5 md:gap-10">
+                <div className="flex flex-col gap-5 md:gap-10 ">
                   <p className="text-lg leading-relaxed text-gray-700">
                     {selectedData.duration || "No description provided."}
                   </p>
@@ -76,6 +77,7 @@ const Detail = () => {
                   <p className="text-lg leading-relaxed text-gray-700">
                     {selectedData.reminder || "No description provided."}
                   </p>
+                  <BookingButton btnClass="w-full bg-[#0da99e] text-white hover:bg-white hover:text-[#0da99e] hover:border transition-all py-2 rounded-xl" />
                 </div>
               </div>
             </>

@@ -21,10 +21,7 @@ const ServiceCard = ({ services, btnClass }) => {
           <div className="flex flex-col justify-between gap-4 md:w-1/2">
             <h2 className="text-2xl font-semibold ">{item.name}</h2>
             <p className="text-gray-600">{item.description}</p>
-            <BookingButton
-              btnClass="w-full bg-[#0da99e] text-white hover:bg-white hover:text-[#0da99e] hover:border transition-all py-2 rounded-xl"
-              defaultService={item.name}
-            />
+            <BookingButton btnClass="w-full bg-[#0da99e] text-white hover:bg-white hover:text-[#0da99e] hover:border transition-all py-2 rounded-xl" />
           </div>
         </div>
       ))}

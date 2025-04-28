@@ -5,7 +5,7 @@ import { services } from "@/app/data";
 const Footer = () => {
   return (
     <div className="md:rounded-t-4xl bg-gray-50">
-      <div className="container px-3 mx-auto mt-5 rounded-b-lg md:mt-10 md:pt-10 ">
+      <div className="container px-3 mx-auto rounded-b-lg md:pt-10 ">
         <div className="grid gap-10 py-10 md:grid-cols-2">
           <div className="order-last md:pr-10 md:order-1">
             <a
@@ -25,10 +25,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-col order-1 gap-5 md:gap-10 md:order-last">
             <div>
-              <p className="mb-10 text-2xl font-bold text-center">
+              {/* <p className="mb-10 text-2xl font-bold text-center">
                 Дүрс оншилгооны үйлчилгээ 24 цагын турш үзүүлнэ
-              </p>
-              <div className="grid items-center grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
+              </p> */}
+              {/* <div className="grid items-center grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
                 {services?.map((item, i) => (
                   <div
                     className="flex items-center gap-5"
@@ -47,7 +47,7 @@ const Footer = () => {
                     <p className="text-lg uppercase ">{item.name}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col gap-5">
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <footer className="pt-4 pb-10 border-t border-gray-200">
+        <footer className="py-3 border-t border-gray-200 md:py-5">
           <div className="container justify-between px-4 mx-auto md:flex">
             <div className="uppercase ">medtrauma</div>
             <div className="">© Copyright Bayarmaa. All Rights Reserved</div>

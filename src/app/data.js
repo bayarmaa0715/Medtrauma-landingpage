@@ -282,4 +282,14 @@ export const highlights = [
   { img: "/images/service/medical.png", title: "MRI" },
   { img: "/images/service/24-7.png", title: "24 цагийн оношилгоо" },
   { img: "/images/service/document.png", title: "Хариу гаргалт" },
+  { img: "/images/20.png", title: "Шөнийн хямдрал" },
+];
+
+export const communityImages = [
+  { img: "/images/hamtolon1.jpeg" },
+  { img: "/images/hamtolon2.jpeg" },
+  { img: "/images/hamtolon3.jpeg" },
+  { img: "/images/hamtolon4.jpeg" },
+  { img: "/images/hamtolon5.jpeg" },
+  { img: "/images/hamtolon6.jpeg" },
 ];

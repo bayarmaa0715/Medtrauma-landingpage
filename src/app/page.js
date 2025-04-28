@@ -16,19 +16,19 @@ export default function Home() {
     <div className="flex flex-col gap-5 md:gap-10">
       <Hero />
 
-      <div className="container flex flex-col justify-center gap-5 mx-auto md:gap-20">
+      <div className="container flex flex-col justify-center gap-5 mx-auto md:gap-10">
         <div className="flex flex-col gap-5 md:gap-10">
-          <h1 className="mb-6 text-2xl font-bold text-center uppercase">
+          <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
             Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
           </h1>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:flex md:justify-between">
             {highlights.map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-3">
                 <Image
                   src={item.img}
                   alt={item.title}
-                  width={124}
-                  height={124}
+                  width={100}
+                  height={100}
                 />
                 <p className="text-sm font-semibold text-center text-gray-600 uppercase">
                   {item.title}
@@ -37,17 +37,21 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-5 mx-auto md:gap-10">
+        <div className="flex flex-col justify-center gap-5 md:gap-10">
           {services.map((item, i) => (
             <div
               key={`servicetype-${i}`}
               className="flex flex-col gap-10 p-6 md:p-10"
             >
-              <h2 className="text-2xl font-bold text-center uppercase md:text-3xl">
+              <h2 className="text-lg font-bold text-center uppercase md:text-2xl">
                 {item.name}{" "}
               </h2>
 
-              <div className="flex flex-col items-stretch gap-8 md:flex-row">
+              <div
+                className={`flex flex-col items-stretch gap-8  ${
+                  i === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
+              >
                 <div className="relative w-full md:w-1/2 h-[250px] md:h-[400px] overflow-hidden rounded-2xl">
                   <Image
                     src={item.img}
@@ -58,7 +62,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col justify-center gap-6 md:w-1/2">
-                  <p className="leading-relaxed text-justify md:text-xl ">
+                  <p className="leading-relaxed text-justify md:text-lg ">
                     {item.description}
                   </p>
 

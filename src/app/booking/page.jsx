@@ -12,10 +12,10 @@ import {
 
 const Booking = () => {
   return (
-    <div className="container flex justify-center flex-1 p-5 mx-auto">
-      <div className="w-full md:w-xl ">
-        <h1 className="mb-6 text-2xl font-bold text-center uppercase">
-          Цаг захиалах{" "}
+    <div className="p-5 md:py-10">
+      <div className="container mx-auto">
+        <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
+          Цаг захиалах
         </h1>
         <div className="">
           <Form
@@ -76,9 +76,7 @@ const Booking = () => {
                 <Select.Option value={1}>
                   Соронзон үелзүүрт томографи MRI
                 </Select.Option>
-                <Select.Option value={2}>
-                  Компьютерт томографи CT{" "}
-                </Select.Option>
+                <Select.Option value={2}>Компьютерт томографи CT</Select.Option>
               </Select>
             </Form.Item>
             <Form.Item label="Зовиур" name="reason">
@@ -87,10 +85,7 @@ const Booking = () => {
 
             <Form.Item>
               <div className="flex justify-end gap-3">
-                <Button
-                  style={{ backgroundColor: "#0da99e", color: "white" }}
-                  // onClick={handleCancel}
-                >
+                <Button style={{ backgroundColor: "#0da99e", color: "white" }}>
                   Буцах
                 </Button>
                 <Button

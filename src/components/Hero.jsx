@@ -8,24 +8,19 @@ const Hero = () => {
       style={{ backgroundImage: "url('/images/coverimg.webp')" }}
     >
       <div className="absolute inset-0 z-0 bg-black opacity-[.20]"></div>{" "}
-      <div className="absolute flex flex-col items-center justify-center p-4 mx-auto md:top-2/6 md:left-1/6 md:max-w-2xl z-1 text-start">
-        <h1 className="mb-6 text-4xl font-bold uppercase ">
+      <div className="absolute z-10 flex flex-col items-start justify-center p-4 mx-auto text-start md:top-2/6 md:left-1/6 md:max-w-2xl">
+        <h1 className="text-lg font-bold text-white uppercase md:text-3xl">
           Медтравма эмнэлэг
         </h1>
-        <p className="mb-8 text-lg ">
-          Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
-        </p>
-        <p className="mb-8 text-lg ">MRI- Соронзон Резонанст Томографи</p>
-        <p className="mb-8 text-lg ">
-          СТ- Компьютерт Томографи 24 цагийн оношилгоо{" "}
-        </p>
 
-        <div className="flex self-start mb-12">
-          <BookingButton
-            btnClass={
-              "bg-transparent border cursor-pointer border-[#337669] text-[#337669] px-8 py-3 rounded-lg hover:bg-[#337669]  hover:border-2  hover:text-white transition-colors duration-300"
-            }
-          />
+        <div className="flex flex-col gap-2 mt-4 md:text-xl text-white/90">
+          <p className="">Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе</p>
+          <p className="">MRI- Соронзон Резонанст Томографи</p>
+          <p className="">СТ- Компьютерт Томографи 24 цагийн оношилгоо</p>
+        </div>
+
+        <div className="flex self-start mt-8">
+          <BookingButton btnClass="bg-transparent border cursor-pointer border-[#337669] text-[#337669] px-8 py-3 rounded-lg hover:bg-[#337669]  hover:border-2 hover:text-white transition-colors duration-300" />
         </div>
       </div>
     </div>
