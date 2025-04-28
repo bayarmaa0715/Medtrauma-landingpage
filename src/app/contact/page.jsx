@@ -71,7 +71,7 @@ const Contact = () => {
           fill
           className="object-cover opacity-90"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+        <div className="absolute inset-0 flex items-center justify-center p-5 bg-black/30">
           <div className="text-center text-white">
             <h1 className="mb-4 text-lg font-bold uppercase md:text-2xl">
               Медтравма эмнэлэг

@@ -16,7 +16,7 @@ export default function Home() {
     <div className="flex flex-col gap-5 md:gap-10">
       <Hero />
 
-      <div className="container flex flex-col justify-center gap-5 mx-auto md:gap-10">
+      <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:gap-10">
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
             Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
