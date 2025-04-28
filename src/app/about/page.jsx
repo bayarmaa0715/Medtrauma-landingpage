@@ -95,7 +95,7 @@ const About = () => {
       setHospitalImageIndex((prev) =>
         prev === hospitalImages.length - 1 ? 0 : prev + 1
       );
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearInterval(interval);
@@ -159,7 +159,7 @@ const About = () => {
               src={hospitalImages[hospitalImageIndex].img}
               alt="Hospital Image"
               fill
-              className="object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
+              className="object-cover transition-transform duration-1000 ease-in transform hover:scale-105 rounded-2xl"
             />
             <div className="absolute flex justify-between w-full p-2 top-1/2">
               <button
@@ -205,7 +205,7 @@ const About = () => {
               src={communityImages[currentImageIndex].img}
               alt="Service Image"
               fill
-              className="object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
+              className="object-cover transition-transform duration-1000 ease-in transform hover:scale-105 rounded-2xl"
             />
 
             <div className="absolute flex justify-between w-full p-2 top-1/2">
