@@ -293,3 +293,7 @@ export const communityImages = [
   { img: "/images/hamtolon5.jpeg" },
   { img: "/images/hamtolon6.jpeg" },
 ];
+export const hospitalImages = [
+  { img: "/images/medlogo.jpeg" },
+  { img: "/images/ct1.jpeg" },
+];

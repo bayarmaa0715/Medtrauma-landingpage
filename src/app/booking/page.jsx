@@ -17,10 +17,10 @@ const Booking = () => {
         <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
           Цаг захиалах
         </h1>
-        <div className="">
+        <div className="flex flex-col items-center w-full">
           <Form
             layout="vertical"
-            className="w-full"
+            className="w-full md:max-w-1/3 "
             onFinish={(values) => {
               console.log("📩 Submitted values:", values);
             }}

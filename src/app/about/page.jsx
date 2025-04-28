@@ -16,7 +16,7 @@ import {
 
 import { Card, Col, Row } from "antd";
 import Image from "next/image";
-import { communityImages } from "../data";
+import { communityImages, hospitalImages } from "../data";
 
 const About = () => {
   const features = [
@@ -83,6 +83,7 @@ const About = () => {
     },
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [hospitalImageIndex, setHospitalImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -90,10 +91,28 @@ const About = () => {
         prevIndex === communityImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
+    const hospitalInterval = setInterval(() => {
+      setHospitalImageIndex((prev) =>
+        prev === hospitalImages.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearInterval(hospitalInterval);
+    };
   }, [communityImages.length]);
+  const goToPreviousHospital = () => {
+    setHospitalImageIndex((prev) =>
+      prev === 0 ? hospitalImages.length - 1 : prev - 1
+    );
+  };
 
+  const goToNextHospital = () => {
+    setHospitalImageIndex((prev) =>
+      prev === hospitalImages.length - 1 ? 0 : prev + 1
+    );
+  };
   const goToPrevious = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? communityImages.length - 1 : prevIndex - 1
@@ -136,11 +155,26 @@ const About = () => {
           </div>
           <div className="relative w-full md:w-1/2 h-[250px] md:h-[400px] overflow-hidden rounded-2xl">
             <Image
-              src={"/images/coverimg.webp"}
-              alt="Service Image"
+              key={`hospitalImages ${hospitalImageIndex}`}
+              src={hospitalImages[hospitalImageIndex].img}
+              alt="Hospital Image"
               fill
               className="object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
             />
+            <div className="absolute flex justify-between w-full p-2 top-1/2">
+              <button
+                onClick={goToPreviousHospital}
+                className="flex items-center justify-center w-8 h-8 text-white transition bg-gray-300 rounded-full hover:bg-gray-600 bg-opacity-70 hover:bg-opacity-100"
+              >
+                <ArrowLeftOutlined />
+              </button>
+              <button
+                onClick={goToNextHospital}
+                className="flex items-center justify-center w-8 h-8 text-white transition bg-gray-300 rounded-full hover:bg-gray-600 bg-opacity-70 hover:bg-opacity-100"
+              >
+                <ArrowRightOutlined />
+              </button>
+            </div>
           </div>
         </div>
         <div
@@ -174,7 +208,6 @@ const About = () => {
               className="object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
             />
 
-            {/* Previous/Next Buttons */}
             <div className="absolute flex justify-between w-full p-2 top-1/2">
               <button
                 onClick={goToPrevious}
