@@ -16,7 +16,7 @@ export default function Home() {
     <div className="flex flex-col gap-5 md:gap-10">
       <Hero />
 
-      <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:gap-10">
+      <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:p-10 md:gap-10">
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
             Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
@@ -39,10 +39,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center gap-5 md:gap-10">
           {services.map((item, i) => (
-            <div
-              key={`servicetype-${i}`}
-              className="flex flex-col gap-10 p-6 md:p-10"
-            >
+            <div key={`servicetype-${i}`} className="flex flex-col gap-10 ">
               <h2 className="text-lg font-bold text-center uppercase md:text-2xl">
                 {item.name}{" "}
               </h2>

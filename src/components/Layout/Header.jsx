@@ -20,7 +20,7 @@ const Navbar = () => {
           <img
             src="/images/medlogo-removebg-preview.png"
             alt="MediFirm Logo"
-            className="h-[50px] w-[80px] hidden md:block "
+            className="h-[65px] w-[100px] hidden md:block "
           />
           <img
             src="/images/medlogo-removebg-preview (1).png"
@@ -91,7 +91,7 @@ const Navbar = () => {
 
               <footer className="border-t border-gray-200 ">
                 <div className="pt-5 text-[10px] text-center text-gray-400">
-                  © Copyright Bayarmaa
+                  © Copyright MEDTRAUMA
                 </div>
               </footer>
             </div>

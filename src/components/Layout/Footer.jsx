@@ -86,9 +86,14 @@ const Footer = () => {
           </div>
         </div>
         <footer className="py-3 border-t border-gray-200 md:py-5">
-          <div className="container justify-between px-4 mx-auto md:flex">
-            <div className="uppercase ">medtrauma</div>
-            <div className="">© Copyright Bayarmaa. All Rights Reserved</div>
+          <div className="container items-center justify-between px-4 mx-auto md:flex">
+            <img
+              src="/images/medlogo-removebg-preview (1).png"
+              alt="MediFirm Logo"
+              className="h-[30px] w-[40px] "
+            />
+
+            <div className="">© Copyright MEDTRAUMA. All Rights Reserved</div>
           </div>
         </footer>
       </div>
