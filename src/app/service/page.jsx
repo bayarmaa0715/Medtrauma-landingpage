@@ -12,7 +12,7 @@ const Service = () => {
     return data.filter((item) => item.serviceTypeId === typeId);
   };
   return (
-    <div className="container flex flex-col justify-center py-5 mx-auto md:py-10">
+    <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:py-10 md:gap-10">
       <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
         Компьютерт Томографи MRI болон Соронзон Резонанст Томографи CT Оношилгоо
       </h1>
@@ -26,7 +26,7 @@ const Service = () => {
         {services.map((item, i) => (
           <div
             key={`servicetype-${i}`}
-            className="flex flex-col gap-10 p-6 md:p-10"
+            className="flex flex-col gap-5 md:gap-10 "
           >
             <h2 className="text-lg font-bold text-center uppercase md:text-2xl">
               {item.name}{" "}

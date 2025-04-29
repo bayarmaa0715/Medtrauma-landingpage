@@ -13,10 +13,10 @@ export default function Home() {
     return data.filter((item) => item.serviceTypeId === typeId);
   };
   return (
-    <div className="flex flex-col gap-5 md:gap-10">
+    <div className="flex flex-col ">
       <Hero />
 
-      <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:p-10 md:gap-10">
+      <div className="container flex flex-col justify-center gap-5 p-5 mx-auto md:p-10 md:gap-15">
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="text-lg font-bold text-center uppercase md:text-2xl">
             Эрүүл жаргалтай ирээдүйг хамтдаа бүтээцгээе
