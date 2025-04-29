@@ -6,7 +6,7 @@ import {
   EnvironmentOutlined,
   PhoneOutlined,
   MailOutlined,
-  FacebookOutlined,
+  ClockCircleOutlined,
 } from "@ant-design/icons";
 
 const Contact = () => {
@@ -45,7 +45,7 @@ const Contact = () => {
       color: "#337669",
     },
     {
-      icon: <MailOutlined style={{ color: "#337669" }} />,
+      icon: <ClockCircleOutlined style={{ color: "#337669" }} />,
       title: "Ажиллах цагийн хуваарь",
       description: [
         {
